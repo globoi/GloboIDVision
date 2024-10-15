@@ -2,5 +2,5 @@ import Foundation
 
 protocol SignInUseCaseProtocol {
 
-    func execute(scopes: [Scope]) -> AnyPublisher<String, SignInError>
+    func execute(email: String, password: String) async throws -> String
 }

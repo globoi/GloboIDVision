@@ -8,6 +8,8 @@ struct TokenResponse: Decodable {
     let scope: String
     let expiresIn: Int
     let refreshExpiresIn: Int
+    let notBeforePolicy: Int
+    let sessionState: String
 
     private enum CodingKeys: String, CodingKey {
         case accessToken = "access_token"
@@ -17,5 +19,7 @@ struct TokenResponse: Decodable {
         case scope = "scope"
         case expiresIn = "expires_in"
         case refreshExpiresIn = "refresh_expires_in"
+        case notBeforePolicy = "not-before-policy"
+        case sessionState = "session_state"
     }
 }

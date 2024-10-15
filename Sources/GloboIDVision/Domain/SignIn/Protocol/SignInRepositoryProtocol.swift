@@ -7,5 +7,5 @@ protocol SignInRepositoryProtocol {
 
     init(localData: SignInLocalDataProtocol, remoteData: SignInRemoteDataProtocol)
 
-    func signIn(scopes: [Scope]) -> AnyPublisher<String, SignInError>
+    func signIn(email: String, password: String) async throws -> String
 }
